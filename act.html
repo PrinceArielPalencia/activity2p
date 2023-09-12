@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Example</title>
+</head>
+<body>
+    <h1>Hello, JavaScript!</h1>
+
+    <p>Click the button to change the text color.</p>
+
+    <button id="changeColorButton">Change Color</button>
+
+    <script>
+        const button = document.getElementById("changeColorButton");
+
+        button.addEventListener("click", function() {
+            // Generate a random color
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            
+            const heading = document.querySelector("h1");
+            heading.style.color = randomColor;
+        });
+    </script>
+</body>
+</html>
